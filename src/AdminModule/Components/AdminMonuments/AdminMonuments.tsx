@@ -32,7 +32,6 @@ export default function AdminMonuments() {
   const [modalState, setModalState] = useState("");
   const [cityId, setCityId] = useState("");
   const [id, setId] = useState("");
-  const [monumentName, setMonumentName] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [updateModalLoading, setUpdateModalLoading] = useState(false);
   const dispatch = useDispatch();
@@ -130,14 +129,14 @@ export default function AdminMonuments() {
     axios
       .delete(`${baseUrl}city/${cityId}/destination/${id}`, headers)
       .then((res) => {
-        toast.success(res.data.message);
+        toast.success(res?.data?.message);
         getAllCities("destinations", (res) => {
           return dispatch(setmonuments(res));
         });
         onCloseModal();
       })
       .catch((err) => {
-        toast.error(err.response.data.message || "network error");
+        toast.error(err?.response?.data?.message || "network error");
         console.log(err);
         
       })
@@ -166,7 +165,6 @@ export default function AdminMonuments() {
 
     })
     .catch((err) => {
-      toast.error("sssssssss")
       console.log(err);
       
     })
@@ -187,7 +185,7 @@ export default function AdminMonuments() {
 
     const formData = new FormData();
 
-    if (monumentName!==data.name) {
+    if (true) {
     formData.append("name", data.name);}
     formData.append("ticketPrice", data.ticketPrice);
     formData.append("type", data.type);
@@ -204,7 +202,7 @@ export default function AdminMonuments() {
     .put(`${baseUrl}city/${cityId}/destination/${id}`, formData, headers)
     .then((res) => {
 
-      toast.success(res.data.message);
+      toast.success(res?.data?.message);
       onCloseModal();
       getAllCities("destinations", (res) => {
         return dispatch(setmonuments(res));
@@ -212,9 +210,9 @@ export default function AdminMonuments() {
 
     })
     .catch((err) => {
-      toast.error(err.response.data.message || "failed to create monument");
+      toast.error(err?.response?.data?.message || "failed to create monument");
       toast.error(
-        err.response.data.validationErr[0].message || "Network error"
+        err?.response?.data?.validationErr[0]?.message || "Network error"
       );
     })
     .finally(() => {

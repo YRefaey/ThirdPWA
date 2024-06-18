@@ -46,7 +46,7 @@ const {postData,isLoading}=postDataHock();
                 />
               </div>
               {errors?.email && (
-                <ErrorMessage text={String(errors?.email.message)} />
+                <ErrorMessage text={String(errors?.email?.message)} />
               )}
             </div>
             {isLoading?<Button text="Loading" />:<Button text="Send" />}

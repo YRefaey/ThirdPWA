@@ -26,23 +26,21 @@ export default function Cities() {
   const [isLoading, setIsLoading] = useState(false);
   const [cityId, setCityId] = useState(0);
   const [modalState, setModalState] = useState("close");
-  const [cityData, setCityData] = useState();
   const showAddModal = () => {
     setValue('name',"");
     setValue('image',"")
     setModalState("add-modal");
   };
+  
   const showDeleteModal = (Id: any) => {
     setCityId(Id);
     setModalState("delete-modal");
   };
 
   const showUpdateModal = (city:any) => {
-    console.log(city);
-    setCityData(city);
-    setValue('name',city?.name);
-    setValue('image',city?.image?.secure_url)
-    setCityId(city?.id)
+    setValue('name',city.name);
+    setValue('image',city.image.secure_url)
+    setCityId(city.id)
     
     setModalState("update-modal");
   };
@@ -56,12 +54,10 @@ export default function Cities() {
     const addFormData = new FormData();
     addFormData.append("name", data["name"]);
     addFormData.append("image", data["image"][0]);
-    console.log(addFormData);
     setIsLoading(true);
     axios
       .post(`${baseUrl}city`, addFormData, headers)
       .then((res) => {
-        console.log(res);
         setIsLoading(false);
         handleClose();
         toast.success(res?.data?.message);
@@ -70,7 +66,6 @@ export default function Cities() {
         });
       })
       .catch((err) => {
-        console.log(err);
         setIsLoading(false);
         toast.error(err?.response?.data?.message);
       });
@@ -81,6 +76,8 @@ export default function Cities() {
     axios
       .delete(`${baseUrl}city/${cityId}`, headers)
       .then((res) => {
+        console.log(res);
+        
         handleClose();
         setIsLoading(false);
         toast.success(res?.data?.message || "City deleted successfully");
@@ -89,7 +86,6 @@ export default function Cities() {
         });
       })
       .catch((err) => {
-        console.log(err);
         toast.error(err?.response?.data?.message || "Axios error!!");
         setIsLoading(false);
       });
@@ -99,7 +95,6 @@ export default function Cities() {
       const addFormData = new FormData();
     addFormData.append("name", data["name"]);
     addFormData.append("image", data["image"][0]);
-    console.log(addFormData);
       setIsLoading(true);
       axios.put(`${baseUrl}city/${cityId}`,addFormData, headers)
         .then((res) => {
@@ -117,7 +112,6 @@ export default function Cities() {
     };
   return (
     <>
-      {/* header */}
       <div
         dir={i18n.language == "ar" ? "rtl" : "ltr"}
         className="Elheader home-container my-5 mx-2 p-4 rounded-lg grid grid-cols-1 gap-4 lg:grid-cols-4 lg:gap-8 align-items-center "
@@ -142,13 +136,13 @@ export default function Cities() {
 
       {cities.length > 0 ? (
         <div className="grid grid-cols-2 gap-2 lg:grid-cols-4 lg:gap-1 ">
-          {cities.map((city: any) => (
+          {cities?.map((city: any) => (
             <div className="w-full" key={city.id}>
               <CityCard
                 modalDelete={() => showDeleteModal(city.id)}
                 modalUpdate={()=>showUpdateModal(city)}
-                name={city?.name}
-                image={city?.image?.secure_url}
+                name={city.name}
+                image={city.image.secure_url}
               />
             </div>
           ))}
@@ -282,7 +276,6 @@ export default function Cities() {
             </button>
           </form>
         </Modal>
-        {/* **********delete-modal******* */}
         <Modal
           show={modalState == "delete-modal"}
           size="md"
@@ -330,7 +323,6 @@ export default function Cities() {
           </div>
         </Modal>
 
-        {/* *********update-modal************ */}
         <Modal
           show={modalState == "update-modal"}
           size="md"
@@ -452,7 +444,6 @@ export default function Cities() {
           </form>
         </Modal>
       </div>
-      {/* ---------------------- */}
     </>
   );
 }

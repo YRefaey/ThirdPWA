@@ -20,17 +20,17 @@ export default function InspectorHome() {
     axios
       .get(`${baseUrl}order/filter-by-day/${checked}`, headers)
       .then((res) => {
-        setTickets(res.data.orders || res.data.filteredOreders);
+        setTickets(res?.data?.orders || res?.data?.filteredOreders);
         setIsLoading(false);
       })
       .catch((err) => {
-        toast.error(err.response.data.message || "network error");
+        toast.error(err?.response?.data?.message || "network error");
         setIsLoading(false);
       });
   };
 
   const handleCheckboxChange = (event: any) => {
-    setIsChecked(event.target.checked);
+    setIsChecked(event?.target?.checked);
   };
 
   return (
@@ -52,9 +52,9 @@ export default function InspectorHome() {
       </div>
 
       <div>
-        {tickets.length > 0 ? (
+        {tickets?.length > 0 ? (
           !isLoading ? (
-            <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6 my-3 grid-cols-1 pr-2">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 my-3 grid-cols-1 pr-2">
               {tickets?.map((ticket, idx: number) => (
                 <div key={idx}>
                   <TicketCard ticket={ticket} />

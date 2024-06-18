@@ -25,13 +25,13 @@ const dispatch=useDispatch()
     axios
       .patch(`${baseUrl}auth/change-password`, data, headers)
       .then((response) => {
-        toast.success(response.data.message);
+        toast.success(response?.data?.message);
         handleClose()
         dispatch(logOut())
         setIsLoading(false);
       })
       .catch((error) => {
-        toast.error(error.response.data.message);
+        toast.error(error?.response?.data?.message);
         setIsLoading(false);
       });
   };

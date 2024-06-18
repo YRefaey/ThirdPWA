@@ -56,12 +56,12 @@ export default function MonumentsCard({ monument,openDeleteModal,openUpdateModal
       <div className="">
         <div className={`${styles.ag_courses_item}`}>
           <div
-            style={{ backgroundImage: "url(" + `${monument.image.secure_url}` + ")" }}
+            style={{ backgroundImage: "url(" + `${monument?.image?.secure_url}` + ")" }}
             className={styles.ag_courses_item_link}
           >
             <div className={styles.ag_courses_item_bg} />
             <div className={`text-white ${styles.ag_courses_item_title}`}>
-              {monument.name}
+              {monument?.name}
             </div>
             <div
               className={` flex items-center ${styles.ag_courses_item_date_box}`}

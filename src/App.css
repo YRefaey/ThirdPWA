@@ -1,133 +1,228 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
-body{
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
+body {
   font-family: "Roboto Slab", serif;
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
 }
-.bg-auth{
+.bg-auth {
   background-color: rgb(1, 1, 45);
 }
-.menu-flags-button{
-  background:transparent !important;
+.menu-flags-button {
+  background: transparent !important;
   color: white !important;
-  border-bottom:2px solid white !important;
+  border-bottom: 2px solid white !important;
 }
-.Museums{
+.Museums {
   background-image: url("./assets/bgformuseum.jpeg");
   background-size: cover;
   background-position: center;
 }
-.auth-image{
-    background-image: url("./assets/auth.jpeg");
-    background-size: cover;
-    background-position: center center;
-} 
-.auth-layout{
-    background-image: url("./assets/Birrd.png");
-    background-size: cover;
-    background-position: center ;
+.auth-image {
+  background-image: url("./assets/auth.jpeg");
+  background-size: cover;
+  background-position: center center;
+}
+.auth-layout {
+  background-image: url("./assets/Birrd.png");
+  background-size: cover;
+  background-position: center;
 }
 @keyframes typingText {
-    2% { content: 'E|'; }
-    4% { content: 'Em|'; }
-    6% { content: 'Emb|'; }
-    8% { content: 'Emba|'; }
-    10% { content: 'Embark|'; }
-    12% { content: 'Embark |'; }
-    14% { content: 'Embark o|'; }
-    16% { content: 'Embark on|'; }
-    18% { content: 'Embark on |'; }
-    20% { content: 'Embark on y|'; }
-    22% { content: 'Embark on yo|'; }
-    24% { content: 'Embark on you|'; }
-    26% { content: 'Embark on your|'; }
-    28% { content: 'Embark on your |'; }
-    30% { content: 'Embark on your a|'; }
-    32% { content: 'Embark on your ad|'; }
-    34% { content: 'Embark on your adv|'; }
-    36% { content: 'Embark on your adve|'; }
-    38% { content: 'Embark on your adven|'; }
-    40% { content: 'Embark on your advent|'; }
-    42% { content: 'Embark on your adventu|'; }
-    44% { content: 'Embark on your adventur|'; }
-    46% { content: 'Embark on your adventure|'; }
-    48% { content: 'Embark on your adventure |'; }
-    50% { content: 'Embark on your adventure i|'; }
-    52% { content: 'Embark on your adventure int|'; }
-    54% { content: 'Embark on your adventure into|'; }
-    56% { content: 'Embark on your adventure into |'; }
-    58% { content: 'Embark on your adventure into t|'; }
-    60% { content: 'Embark on your adventure into th|'; }
-    62% { content: 'Embark on your adventure into the|'; }
-    64% { content: 'Embark on your adventure into the |'; }
-    66% { content: 'Embark on your adventure into the a|'; }
-    68% { content: 'Embark on your adventure into the an|'; }
-    70% { content: 'Embark on your adventure into the anc|'; }
-    72% { content: 'Embark on your adventure into the anci|'; }
-    74% { content: 'Embark on your adventure into the ancie|'; }
-    76% { content: 'Embark on your adventure into the ancien|'; }
-    78% { content: 'Embark on your adventure into the ancient|'; }
-    80% { content: 'Embark on your adventure into the ancient |'; }
-    82% { content: 'Embark on your adventure into the ancient C|'; }
-    84% { content: 'Embark on your adventure into the ancient Ci|'; }
-    86% { content: 'Embark on your adventure into the ancient Civ|'; }
-    88% { content: 'Embark on your adventure into the ancient Civi|'; }
-    90% { content: 'Embark on your adventure into the ancient Civi|'; }
-    92% { content: 'Embark on your adventure into the ancient Civi|'; }
-    94% { content: 'Embark on your adventure into the ancient Civiliz|'; }
-    96% { content: 'Embark on your adventure into the ancient Civilizati|'; }
-    98% { content: 'Embark on your adventure into the ancient Civilization|'; }
-    100% { content: 'Embark on your adventure into the ancient Civilization|'; }
+  2% {
+    content: "E|";
   }
-  .fade-in-up::before {
-    content: '';
-    display: inline-block;
-    animation: typingText 5s steps(100) infinite;
+  4% {
+    content: "Em|";
   }
-
-
-.layer{
-  transition: all .5s;
+  6% {
+    content: "Emb|";
+  }
+  8% {
+    content: "Emba|";
+  }
+  10% {
+    content: "Embark|";
+  }
+  12% {
+    content: "Embark |";
+  }
+  14% {
+    content: "Embark o|";
+  }
+  16% {
+    content: "Embark on|";
+  }
+  18% {
+    content: "Embark on |";
+  }
+  20% {
+    content: "Embark on y|";
+  }
+  22% {
+    content: "Embark on yo|";
+  }
+  24% {
+    content: "Embark on you|";
+  }
+  26% {
+    content: "Embark on your|";
+  }
+  28% {
+    content: "Embark on your |";
+  }
+  30% {
+    content: "Embark on your a|";
+  }
+  32% {
+    content: "Embark on your ad|";
+  }
+  34% {
+    content: "Embark on your adv|";
+  }
+  36% {
+    content: "Embark on your adve|";
+  }
+  38% {
+    content: "Embark on your adven|";
+  }
+  40% {
+    content: "Embark on your advent|";
+  }
+  42% {
+    content: "Embark on your adventu|";
+  }
+  44% {
+    content: "Embark on your adventur|";
+  }
+  46% {
+    content: "Embark on your adventure|";
+  }
+  48% {
+    content: "Embark on your adventure |";
+  }
+  50% {
+    content: "Embark on your adventure i|";
+  }
+  52% {
+    content: "Embark on your adventure int|";
+  }
+  54% {
+    content: "Embark on your adventure into|";
+  }
+  56% {
+    content: "Embark on your adventure into |";
+  }
+  58% {
+    content: "Embark on your adventure into t|";
+  }
+  60% {
+    content: "Embark on your adventure into th|";
+  }
+  62% {
+    content: "Embark on your adventure into the|";
+  }
+  64% {
+    content: "Embark on your adventure into the |";
+  }
+  66% {
+    content: "Embark on your adventure into the a|";
+  }
+  68% {
+    content: "Embark on your adventure into the an|";
+  }
+  70% {
+    content: "Embark on your adventure into the anc|";
+  }
+  72% {
+    content: "Embark on your adventure into the anci|";
+  }
+  74% {
+    content: "Embark on your adventure into the ancie|";
+  }
+  76% {
+    content: "Embark on your adventure into the ancien|";
+  }
+  78% {
+    content: "Embark on your adventure into the ancient|";
+  }
+  80% {
+    content: "Embark on your adventure into the ancient |";
+  }
+  82% {
+    content: "Embark on your adventure into the ancient C|";
+  }
+  84% {
+    content: "Embark on your adventure into the ancient Ci|";
+  }
+  86% {
+    content: "Embark on your adventure into the ancient Civ|";
+  }
+  88% {
+    content: "Embark on your adventure into the ancient Civi|";
+  }
+  90% {
+    content: "Embark on your adventure into the ancient Civi|";
+  }
+  92% {
+    content: "Embark on your adventure into the ancient Civi|";
+  }
+  94% {
+    content: "Embark on your adventure into the ancient Civiliz|";
+  }
+  96% {
+    content: "Embark on your adventure into the ancient Civilizati|";
+  }
+  98% {
+    content: "Embark on your adventure into the ancient Civilization|";
+  }
+  100% {
+    content: "Embark on your adventure into the ancient Civilization|";
+  }
+}
+.fade-in-up::before {
+  content: "";
+  display: inline-block;
+  animation: typingText 5s steps(100) infinite;
 }
 
-.start-journey:hover .layer{
+.layer {
+  transition: all 0.5s;
+}
+
+.start-journey:hover .layer {
   background-color: rgba(0, 0, 0, 0.322);
 }
 
-.bg1{
+.bg1 {
   background-image: url("assets/camel.jpg");
   background-size: cover;
   background-position: center center;
 }
-.bg2{
+.bg2 {
   background-image: url("assets/boat.jpg");
   background-size: cover;
   background-position: center center;
 }
-.bg3{
+.bg3 {
   background-image: url("assets/temple.jpg");
   background-size: cover;
   background-position: center center;
 }
-
-.amoon-image{
+.amoon-image {
   transform: translateX(-50%);
 }
-
 /* react-flag-select */
-.active{
-  background-color: rgb(22 101 52 ) !important;
+.active {
+  background-color: rgb(22 101 52) !important;
 }
-.completed{
+.completed {
   background-color: rgb(5 46 22) !important;
 }
-.ReactFlagsSelect-module_selectOption__3pcgW , .ReactFlagsSelect-module_filterBox__3m8EU{
-  color: black !important
+.ReactFlagsSelect-module_selectOption__3pcgW,
+.ReactFlagsSelect-module_filterBox__3m8EU {
+  color: black !important;
 }
-
-
-
 
 /* card */
 
@@ -250,34 +345,64 @@ body{
     transition-delay: 500ms;
   }
 }
-
+/* card media query */
+@media screen and (max-width: 600px) {
+  div.cardfan img {
+    position: absolute;
+    width: 100vh !important;
+    height: 40vh !important;
+    transform-origin: center !important;
+    transition: all 1s linear;
+  }
+  div.cardfan {
+    width: 30vh !important;
+    margin: 2rem auto;
+    position: relative;
+  }
+  .card__background {
+    object-fit: cover;
+    width: 100vh !important;
+    height: 100% !important;
+  }
+  .card__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    padding: 2px !important;
+  }
+  .card  {
+    height: 80vh !important;
+    padding: 4px 0px !important;
+  }
+}
 
 /* highlight */
-div.cardfan { 
+div.cardfan {
   width: 33%;
   margin: 2rem auto;
-  position: relative; 
+  position: relative;
 }
-div.cardfan img { 
-  position: absolute; 
-  width: 100%; 
-  height: 50dvh ; 
-  border: 12px solid #ffe; 
-  box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.2); 
-  transform-origin: center 400px; 
-  transition: all 1s linear; 
+div.cardfan img {
+  position: absolute;
+  width: 100%;
+  height: 50dvh;
+  border: 12px solid #ffe;
+  box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.2);
+  transform-origin: center 400px;
+  transition: all 1s linear;
 }
-div.cardfan img:first-child { 
-  transform: rotate(5deg);  
+div.cardfan img:first-child {
+  transform: rotate(5deg);
 }
-div.cardfan img:last-child { 
-  transform: rotate(-5deg); 
+div.cardfan img:last-child {
+  transform: rotate(-5deg);
 }
-div.cardfan:hover img:first-child { 
-  transform: rotate(25deg); 
+div.cardfan:hover img:first-child {
+  transform: rotate(25deg);
 }
-div.cardfan:hover img:last-child { 
-  transform: rotate(-25deg);  
+div.cardfan:hover img:last-child {
+  transform: rotate(-25deg);
 }
 img#aqueduct {
   -webkit-filter: grayscale(100%);
@@ -294,7 +419,7 @@ img#bike {
   -webkit-filter: sepia(100%);
   filter: sepia(100%);
   filter: url(#sepia);
-  background-color: #5E2612;
+  background-color: #5e2612;
   filter: alpha(opacity = 50);
 }
 img#bike:hover {
@@ -306,7 +431,7 @@ img#bike:hover {
 img#roma {
   -webkit-filter: blur(3px);
   filter: blur(3px);
-  filter: url(#blur); 
+  filter: url(#blur);
 }
 img#roma:hover {
   -webkit-filter: blur(0px);
@@ -314,34 +439,108 @@ img#roma:hover {
   filter: none;
 }
 
-
-.sidebar-container .ps-sidebar-container{
+.sidebar-container .ps-sidebar-container {
   background-color: rgb(1, 1, 45);
   color: #fff;
 }
-.side{
-  border-top-right-radius:60px;
+.side {
+  border-top-right-radius: 60px;
 }
-.sidebar-container .ps-sidebar-root{
-border: none;
-height: 100vh;
+.sidebar-container .ps-sidebar-root {
+  border: none;
+  height: 100vh;
 }
 
-.sidebar-container .ps-sidebar-container .ps-menu-button:hover{
+.sidebar-container .ps-sidebar-container .ps-menu-button:hover {
   background-color: #092869;
 }
 
-.header-content{
+.header-content {
   background-image: url(assets/bg-header.png);
   background-size: cover;
-  background-position:center center;
-  }
+  background-position: center center;
+}
 
-  .home-container{
-    background-color: rgb(206, 234, 252);
-    }
+.home-container {
+  background-color: rgb(206, 234, 252);
+}
 
-    
-   .stepper{
-    padding: 0% !important;
-   }
+.stepper {
+  padding: 0% !important;
+}
+
+
+/* review card */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+.snip1533 {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  color: #9e9e9e;
+  display: inline-block;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 16px;
+  margin: 35px 10px 10px;
+  max-width: 310px;
+  min-width: 250px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border-top: 5px solid #d2652d;
+}
+
+.snip1533 *,
+.snip1533 *:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
+.snip1533 figcaption {
+  padding: 13% 10% 12%;
+}
+
+.snip1533 figcaption:before {
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  color: #d2652d;
+  content: "\f10e";
+  font-family: 'FontAwesome';
+  font-size: 32px;
+  font-style: normal;
+  left: 50%;
+  line-height: 60px;
+  position: absolute;
+  top: -30px;
+  width: 60px;
+}
+
+.snip1533 h3 {
+  color: #3c3c3c;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 24px;
+  margin: 10px 0 5px;
+}
+
+.snip1533 h4 {
+  font-weight: 400;
+  margin: 0;
+  opacity: 0.5;
+}
+
+.snip1533 blockquote {
+  font-style: italic;
+  font-weight: 300;
+  margin: 0 0 20px;
+}
+
+
+
+

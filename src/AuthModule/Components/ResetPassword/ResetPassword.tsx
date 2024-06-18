@@ -42,7 +42,7 @@ export default function ResetPassword() {
                 />
               </div>
               {errors?.email && (
-                <ErrorMessage text={String(errors?.email.message)} />
+                <ErrorMessage text={String(errors?.email?.message)} />
               )}
             </div>
             <div className="otp-input my-4 flex items-center">
@@ -57,7 +57,7 @@ export default function ResetPassword() {
                 />
               </div>
               {errors?.otp && (
-                <ErrorMessage text={String(errors?.otp.message)} />
+                <ErrorMessage text={String(errors?.otp?.message)} />
               )}
             </div>
 
@@ -78,7 +78,7 @@ export default function ResetPassword() {
                 />
               </div>
               {errors?.password && (
-                <ErrorMessage text={String(errors?.password.message)} />
+                <ErrorMessage text={String(errors?.password?.message)} />
               )}
             </div>
             <div className="confirm-pass input my-4 flex items-center">
@@ -107,7 +107,7 @@ export default function ResetPassword() {
                 />
               </div>
               {errors?.confirmPassword && (
-                <ErrorMessage text={String(errors?.confirmPassword.message)} />
+                <ErrorMessage text={String(errors?.confirmPassword?.message)} />
               )}
             </div>
             {isLoading?<Button text="lodaing" />:<Button text="Reset" />}

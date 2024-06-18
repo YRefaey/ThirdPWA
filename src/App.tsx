@@ -1,10 +1,9 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createHashRouter } from "react-router-dom";
 import AdminHome from "./AdminModule/AdminHome";
 import AdminMonuments from "./AdminModule/Components/AdminMonuments/AdminMonuments";
 import Cities from "./AdminModule/Components/Cities/Cities";
-import Users from "./AdminModule/Components/Users/Users";
 import "./App.css";
 import Login from "./AuthModule/Components/Login/Login";
 import Register from "./AuthModule/Components/Register/Register";
@@ -26,14 +25,14 @@ import { login } from "./Redux/AuthSlice/AuthSlice";
 import { setCities } from "./Redux/CitySlice/CitySlice";
 import { setmonuments } from "./Redux/MonumentsSlice/MonumentsSlice";
 import NotFound from "./SharedModules/Components/NotFound/NotFound";
+import Profile from "./SharedModules/Components/Profile/Profile";
 import SpecificMuseum from "./SpecificMuseumModule/SpecificMuseum";
 import { getAllCities } from "./Utls/getData";
 import ValidateTicket from "./ValidateTicket/ValidateTicket";
 
 function App() {
   const dispatch = useDispatch();
-
-
+  
   useEffect(() => {
     getAllCities("city",(res) => {
       return dispatch(setCities(res));
@@ -44,7 +43,7 @@ function App() {
     dispatch(login());
   }, []);
 
-  const router = createBrowserRouter([
+  const router = createHashRouter([
     {
       path: "/auth",
       errorElement:<NotFound/>,
@@ -86,9 +85,10 @@ function App() {
           errorElement: <NotFound />,
           element: <AdminHome />,
         },
-        { path: "users", element: <Users /> },
         { path: "adminmonuments", element: <AdminMonuments /> },
         { path: "cities", element: <Cities /> },
+        { path: "profile", element: <Profile /> },
+
       ],
     },
     {
@@ -106,6 +106,7 @@ function App() {
           element: <AdminHome />,
         },
         { path: "booking", element: <Booking /> },
+        { path: "profile", element: <Profile /> },
       ],
     },
     {
@@ -122,8 +123,11 @@ function App() {
           errorElement: <NotFound />,
           element: <InspectorHome />,
         },{
-          path:":token",element:<ValidateTicket/>
-        }
+          path:":token",element:<ValidateTicket/>,
+          
+        },
+        { path: "profile", element: <Profile /> },
+
       ],
     },
   ]);

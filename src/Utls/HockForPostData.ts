@@ -15,19 +15,22 @@ import { login } from "../Redux/AuthSlice/AuthSlice";
     const postData=(formData:any,endPoint:string,navigateTo:string):any=>{
         setIsLoading(true);
         axios.post(`${baseUrl}${endPoint}`,formData).then((res)=>{
+          if(res?.data?.accessToken){
+            if (endPoint.split("/")[1]=="login") {
+              localStorage.setItem("userData",JSON.stringify(res.data));
+              dispatch(login());
+            };
+            if (res.data.aboutUser.role=="User") {
+              toast.success(res.data.message);
+              return navigate("/home");
+            };
+            if (res.data.aboutUser.role=="Inspector") {
+              toast.success(res.data.message);
+              return navigate("/inspector");
+            };
+          }
 
-          if (endPoint.split("/")[1]=="login") {
-            localStorage.setItem("userData",JSON.stringify(res.data));
-            dispatch(login());
-          };
-          if (res.data.aboutUser.role=="User") {
-            toast.success(res.data.message);
-            return navigate("/home");
-          };
-          if (res.data.aboutUser.role=="Inspector") {
-            toast.success(res.data.message);
-            return navigate("/inspector");
-          };
+         
           
         toast.success(res.data.message);
         navigate(navigateTo);
@@ -36,7 +39,8 @@ import { login } from "../Redux/AuthSlice/AuthSlice";
       .catch((err)=>{
 
         toast.error(err.response.data.message||"Network Error");
-        console.log(err.response);
+        console.log(err);
+
 
       }).finally(()=>{
         setIsLoading(false);

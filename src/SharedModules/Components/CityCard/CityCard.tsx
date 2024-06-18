@@ -12,9 +12,8 @@ export default function CityCard({name,image,modalDelete,modalUpdate}:Prop) {
   return (
     <>
   
-<div className=''>
 <div className={`${styles.ag_courses_item}`}>
-      <a href="#" style={{backgroundImage: "url(" + `${image}` + ")"}} className={styles.ag_courses_item_link}>
+      <div  style={{backgroundImage: "url(" + `${image}` + ")"}} className={styles.ag_courses_item_link}>
         <div className={styles.ag_courses_item_bg}  />
         <div className={`text-white ${styles.ag_courses_item_title}`}>
           {name}
@@ -25,9 +24,9 @@ export default function CityCard({name,image,modalDelete,modalUpdate}:Prop) {
           <FaTrashCan onClick={modalDelete}  className={` mx-2 ${styles.del}`} />
           </span>
         </div>
-      </a>
+      </div>
     </div>
-</div>
+
 
     </>
   )

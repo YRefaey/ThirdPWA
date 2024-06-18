@@ -89,10 +89,10 @@ export default function Register() {
       if (Object.prototype.hasOwnProperty.call(allFormData, key)) {
         if (
           key === "image" &&
-          allFormData.image &&
-          allFormData.image.length > 0
+          allFormData?.image &&
+          allFormData?.image?.length > 0
         ) {
-          formData.append(key, allFormData.image[0], allFormData.image[0].name);
+          formData.append(key, allFormData?.image[0], allFormData?.image[0].name);
         } else {
           formData.append(key, allFormData[key]);
         }
@@ -146,7 +146,7 @@ export default function Register() {
                     </div>
                     {firstFormErrors?.firstName && (
                       <ErrorMessage
-                        text={String(firstFormErrors?.firstName.message)}
+                        text={String(firstFormErrors?.firstName?.message)}
                       />
                     )}
                   </div>
@@ -173,7 +173,7 @@ export default function Register() {
                     </div>
                     {firstFormErrors?.lastName && (
                       <ErrorMessage
-                        text={String(firstFormErrors?.lastName.message)}
+                        text={String(firstFormErrors?.lastName?.message)}
                       />
                     )}
                   </div>
@@ -198,7 +198,7 @@ export default function Register() {
                     </div>
                     {firstFormErrors?.userName && (
                       <ErrorMessage
-                        text={String(firstFormErrors?.userName.message)}
+                        text={String(firstFormErrors?.userName?.message)}
                       />
                     )}
                   </div>
@@ -222,7 +222,7 @@ export default function Register() {
                     </div>
                     {firstFormErrors?.email && (
                       <ErrorMessage
-                        text={String(firstFormErrors?.email.message)}
+                        text={String(firstFormErrors?.email?.message)}
                       />
                     )}
                   </div>
@@ -246,7 +246,7 @@ export default function Register() {
                   </div>
                   {firstFormErrors?.password && (
                     <ErrorMessage
-                      text={String(firstFormErrors?.password.message)}
+                      text={String(firstFormErrors?.password?.message)}
                     />
                   )}
                 </div>
@@ -271,7 +271,7 @@ export default function Register() {
                   </div>
                   {firstFormErrors?.cpassword && (
                     <ErrorMessage
-                      text={String(firstFormErrors?.cpassword.message)}
+                      text={String(firstFormErrors?.cpassword?.message)}
                     />
                   )}
                 </div>
@@ -315,7 +315,7 @@ export default function Register() {
                     />
                   </div>
                   {errors?.phone && (
-                    <ErrorMessage text={String(errors?.phone.message)} />
+                    <ErrorMessage text={String(errors?.phone?.message)} />
                   )}
                 </div>
 
@@ -377,7 +377,7 @@ export default function Register() {
                     </div>
                   </div>
                   {errors?.gender && (
-                    <ErrorMessage text={String(errors?.gender.message)} />
+                    <ErrorMessage text={String(errors?.gender?.message)} />
                   )}
                 </div>
 
@@ -405,7 +405,7 @@ export default function Register() {
                       />
                     </div>
                     {errors?.image && (
-                      <ErrorMessage text={String(errors?.image.message)} />
+                      <ErrorMessage text={String(errors?.image?.message)} />
                     )}
                   </div>
                 </div>

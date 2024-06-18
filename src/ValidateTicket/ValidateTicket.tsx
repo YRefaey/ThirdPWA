@@ -18,25 +18,25 @@ interface TokenData {
   faceId: string;
   status: string;
 }
-interface NewTicket {
-  userId: {
-    image: {
-      secure_url: string;
-    };
-    lastName: string;
-    firstName: string;
-    country: string;
-  };
-  touristDestination: {
-    name: string;
-    quantity: number;
-  };
-  DateOfVisit: string;
-  status: string;
-}
-interface TicketCardProps {
-  ticket: NewTicket | null;
-}
+// interface NewTicket {
+//   userId: {
+//     image: {
+//       secure_url: string;
+//     };
+//     lastName: string;
+//     firstName: string;
+//     country: string;
+//   };
+//   touristDestination: {
+//     name: string;
+//     quantity: number;
+//   };
+//   DateOfVisit: string;
+//   status: string;
+// }
+// interface TicketCardProps {
+//   ticket: NewTicket | null;
+// }
 
 
 export default function ValidateTicket() {

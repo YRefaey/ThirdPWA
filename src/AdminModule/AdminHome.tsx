@@ -9,6 +9,7 @@ export default function AdminHome() {
   const { data } = useSelector((state: any) => state.authReducer);
   return (
     <>
+
       <Header />
       {data.role == "Admin" ? (
         <div
@@ -46,5 +47,6 @@ export default function AdminHome() {
         ""
       )}
     </>
+    
   );
 }

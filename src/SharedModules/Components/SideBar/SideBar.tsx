@@ -56,11 +56,11 @@ export default function SideBar() {
               component={
                 <Link
                   to={
-                    data.role == "Admin"
+                    data?.role == "Admin"
                       ? "/dashboard"
-                      : data.role == "User"
+                      : data?.role == "User"
                       ? "/home"
-                      :data.role=="Inspector"?
+                      :data?.role=="Inspector"?
                       "/inspector":"/"
                   }
                 />

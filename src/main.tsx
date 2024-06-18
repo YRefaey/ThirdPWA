@@ -20,11 +20,10 @@ const updateSW = registerSW({
   },
 });
 
-
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <Provider store={store}>
-    <ToastContainer theme='dark'/>
+    <ToastContainer autoClose={1000} style={{ marginTop:50}} theme='dark'/>
     <App />
     </Provider>
   </React.StrictMode>,

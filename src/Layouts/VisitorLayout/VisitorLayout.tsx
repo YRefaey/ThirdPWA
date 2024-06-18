@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { Outlet } from "react-router-dom";
 
 export default function VisitorLayout() {
-  const { t, i18n } = useTranslation();
+  const {  i18n } = useTranslation();
   return (
     <div dir={i18n.language == "ar" ? "rtl" : "ltr"}>
         <Outlet/>

@@ -12,7 +12,7 @@ export default function Highlights({
   secImagee,
   thirdImagee,
 }: images) {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const [firstImage, setFirstImage] = useState<string>(firstImagee);
   const [secImage, setSecImage] = useState<string>(secImagee);
@@ -28,7 +28,7 @@ export default function Highlights({
   return (
       <div className="mx-auto max-w-7xl pl-1 sm:px-6 lg:px-8 mt-3 pb-5">
         <div className="Highlights text-center border-[12px] rounded-xl">
-          <h2 className="text-main text-6xl font-bold py-6 ">{t("Highlights")}</h2>
+          <h2 className="text-main text-3xl md:text-6xl font-bold py-6 ">{t("Highlights")}</h2>
           <div className="my-3">
             <div className="cardfan ">
               <img

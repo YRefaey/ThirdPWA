@@ -26,7 +26,6 @@ export default function AllMuseums() {
     axios
       .get(`${baseUrl}destinations`)
       .then((res) => {
-        // console.log(res?.data?.touristDestinations);
         setDestinations(res?.data?.touristDestinations);
       })
       .catch((err) => {
@@ -50,26 +49,27 @@ export default function AllMuseums() {
       <Navbar />
       <div className="bg-white bg-opacity-40 h-full w-full">
         <div className="my-2">
-          <div className="mb-1 "></div>
-          <div className="flex justify-center items-center">
-            <label
-              className=" p-2 rounded-l-lg border-y-2 border-l-2 border-main  font-medium"
-              htmlFor="citty"
-            >
-              Select The City:
-            </label>
-            <select
-              className="w-[50%] bg-transparent rounded-r-lg border-main  border-y-2 border-r-2"
-              onChange={getCityValue}
-              name="cities"
-              id="citty"
-            >
-              {cities.map((city: any) => (
-                <option key={city._id} value={city.id}>
-                  {city?.name}
-                </option>
-              ))}
-            </select>
+          <div className="flex justify-center">
+            <div className="w-full flex justify-center">
+              <label
+                className=" p-2 rounded-l-lg border-y-2 border-l-2 border-main  font-medium"
+                htmlFor="citty"
+              >
+                Select The City:
+              </label>
+              <select
+                className="w-[50%] bg-transparent rounded-r-lg border-main  border-y-2 border-r-2"
+                onChange={getCityValue}
+                name="cities"
+                id="citty"
+              >
+                {cities.map((city: any) => (
+                  <option key={city?._id} value={city?.id}>
+                    {city?.name}
+                  </option>
+                ))}
+              </select>
+            </div>
           </div>
         </div>
         {destinations.length > 0 ? (

@@ -41,7 +41,7 @@ export default function TicketCard ({ ticket }: Ticket) {
 
       <div className="my-3">
         <div className="block h-full rounded-lg border border-gray-700 p-4 duration-300 hover:border-pink-600">
-          <strong className="font-bold text-main">{`${ticket?.touristDestination?.name}`}</strong> 
+          <p className="font-bold text-main ">{`${ticket?.touristDestination?.name}`}</p> 
           <div className="text-main text-sm my-1">
             <p>
               <strong>Ticket Status: </strong>

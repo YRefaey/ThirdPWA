@@ -4,7 +4,7 @@ import SideBar from "../../SharedModules/Components/SideBar/SideBar";
 import { useTranslation } from "react-i18next";
 
 export default function UserLayout() {
-  const { t, i18n } = useTranslation();
+  const {  i18n } = useTranslation();
   return (
     <>
     <div dir={i18n.language == "ar" ? "rtl" : "ltr"}>
