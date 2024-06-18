@@ -93,7 +93,8 @@
           },
           {
             "src": "windows11/Square44x44Logo.scale-100.png",
-            "sizes": "44x44"
+            "sizes": "44x44",
+            "purpose":"any maskable"
           },
           {
             "src": "windows11/Square44x44Logo.scale-125.png",
@@ -181,7 +182,8 @@
           },
           {
             "src": "windows11/Square44x44Logo.targetsize-44.png",
-            "sizes": "44x44"
+            "sizes": "44x44",
+            "purpose":"any maskable"
           },
           {
             "src": "windows11/Square44x44Logo.targetsize-48.png",
@@ -241,7 +243,8 @@
           },
           {
             "src": "windows11/Square44x44Logo.altform-unplated_targetsize-44.png",
-            "sizes": "44x44"
+            "sizes": "44x44",
+            "purpose":"any maskable"
           },
           {
             "src": "windows11/Square44x44Logo.altform-unplated_targetsize-48.png",
@@ -301,7 +304,8 @@
           },
           {
             "src": "windows11/Square44x44Logo.altform-lightunplated_targetsize-44.png",
-            "sizes": "44x44"
+            "sizes": "44x44",
+            "purpose":"any maskable"
           },
           {
             "src": "windows11/Square44x44Logo.altform-lightunplated_targetsize-48.png",
@@ -341,7 +345,8 @@
           },
           {
             "src": "android/android-launchericon-144-144.png",
-            "sizes": "144x144"
+            "sizes": "144x144",
+            "purpose":"any maskable"
           },
           {
             "src": "android/android-launchericon-96-96.png",
@@ -353,7 +358,8 @@
           },
           {
             "src": "android/android-launchericon-48-48.png",
-            "sizes": "48x48"
+            "sizes": "48x48",
+            "purpose":"any maskable"
           },
           {
             "src": "ios/16.png",
@@ -466,25 +472,13 @@
         "src": "public/manifest-icon-192.maskable.png",
         "sizes": "192x192",
         "type": "image/png",
-        "purpose": "any"
-      },
-      {
-        "src": "public/manifest-icon-192.maskable.png",
-        "sizes": "192x192",
-        "type": "image/png",
-        "purpose": "maskable"
+        "purpose": "any maskable"
       },
       {
         "src": "public/manifest-icon-512.maskable.png",
         "sizes": "512x512",
         "type": "image/png",
-        "purpose": "any"
-      },
-      {
-        "src": "public/manifest-icon-512.maskable.png",
-        "sizes": "512x512",
-        "type": "image/png",
-        "purpose": "maskable"
+        "purpose": "maskable maskable"
       },
       {
         "src": "/icon-256x256.png",
@@ -515,7 +509,7 @@
     "shortcuts": [
       {
         "name": "Explore Museums ",
-        "url": "/museums",
+        "url": "./museums",
         "description": "Explore Egypt's Most Famous Museums",
         "icons":[{
           "src": "windows11/Square44x44Logo.targetsize-96.png",
@@ -524,7 +518,7 @@
       },
       {
         "name": "Visit The Pyramids",
-        "url": "/museums/6668d494c2c95fee284ad947/destination/666908675750abb4d53ed003",
+        "url": "./museums/6668d494c2c95fee284ad947/destination/666908675750abb4d53ed003",
         "description": "See Info about the Great Pyramids of Giza and Book a Ticket in Just a Second !"
         ,"icons":[{
           "src": "windows11/Square44x44Logo.targetsize-96.png",
