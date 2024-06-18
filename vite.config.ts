@@ -16,7 +16,7 @@ export default defineConfig({
   includeAssets: [
       "**/*",
   ],
-        manifest:  {
+        manifest:    {
           "name": "Egypt Here: An E-Tourism Web app",
           "short_name": "Egypt Here",
           "description": "Our E-Tourism website serves as a dedicated online hub, offering extensive travel insights and services tailored to tourists exploring Egypt",
@@ -481,37 +481,32 @@ export default defineConfig({
             ,
             {
               
-              "src": "public/manifest-icon-192.maskable.png",
+              "src": "/manifest-icon-192.maskable.png",
               "sizes": "192x192",
               "type": "image/png",
               "purpose": "any"
             },
             {
-              "src": "public/manifest-icon-192.maskable.png",
+              "src": "/manifest-icon-192.maskable.png",
               "sizes": "192x192",
               "type": "image/png",
               "purpose": "maskable"
             },
             {
-              "src": "public/manifest-icon-512.maskable.png",
+              "src": "/manifest-icon-512.maskable.png",
               "sizes": "512x512",
               "type": "image/png",
               "purpose": "any"
             },
             {
-              "src": "public/manifest-icon-512.maskable.png",
+              "src": "/manifest-icon-512.maskable.png",
               "sizes": "512x512",
               "type": "image/png",
               "purpose": "maskable"
             },
             {
-              "src": "/icon-256x256.png",
+              "src": "Square44x44Logo.altform-unplated_targetsize-256.png",
               "sizes": "256x256",
-              "type": "image/png"
-            },
-            {
-              "src": "/icon-384x384.png",
-              "sizes": "384x384",
               "type": "image/png"
             }
           ],
@@ -533,16 +528,16 @@ export default defineConfig({
           "shortcuts": [
             {
               "name": "Explore Museums ",
-              "url": "./museums",
-              "description": "Explore Egypt's Most Famous Museums"
-              ,"icons":[{
+              "url": "/museums",
+              "description": "Explore Egypt's Most Famous Museums",
+              "icons":[{
                 "src": "windows11/Square44x44Logo.targetsize-96.png",
                 "sizes": "96x96"
               }]
             },
             {
               "name": "Visit The Pyramids",
-              "url": "./museums/6668d494c2c95fee284ad947/destination/666908675750abb4d53ed003",
+              "url": "/museums/6668d494c2c95fee284ad947/destination/666908675750abb4d53ed003",
               "description": "See Info about the Great Pyramids of Giza and Book a Ticket in Just a Second !"
               ,"icons":[{
                 "src": "windows11/Square44x44Logo.targetsize-96.png",
